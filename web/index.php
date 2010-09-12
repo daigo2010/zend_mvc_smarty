@@ -1,4 +1,6 @@
 <?php
+set_include_path(get_include_path() . PATH_SEPARATOR . '/usr/local/ZendFramework/library/');
+set_include_path(get_include_path() . PATH_SEPARATOR . '/usr/local/Smarty/');
 require_once 'Zend/Controller/Front.php';
 require_once '../lib/ZendViewSmarty.php';
 
@@ -13,9 +15,8 @@ if (isset($_SERVER['HTTP_USER_AGENT']) &&
 } else {
     define('APP_DIR', dirname(dirname(__FILE__)) . '/app/');
 } 
-echo APP_DIR;
 $frontController->setControllerDirectory(APP_DIR . 'controllers');
-$view = new Zend_View_Smarty('../app/views/', 
+$view = new Zend_View_Smarty(APP_DIR . 'views/', 
                        array('compile_dir' => APP_DIR . 'var/template_c',
                              'config_dir'  => APP_DIR . 'var/configs',
                              'cache_dir'   => APP_DIR . 'var/cache'));

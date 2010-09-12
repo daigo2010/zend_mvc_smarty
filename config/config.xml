@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<configdata>
+  <production>
+      <webhost>59.106.178.157</webhost>
+      <database>
+          <adapter>pdo_mysql</adapter>
+          <params>
+              <host>127.0.0.1</host>
+              <username>webuser</username>
+              <password>f57727b95e233e2d93efbd3a8da53b00</password>
+              <dbname>sefre</dbname>
+          </params>
+      </database>
+  </production>
+</configdata>
+
